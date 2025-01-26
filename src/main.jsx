@@ -8,8 +8,6 @@ import {
 import Root from './Component/Root';
 
 
-
-
 const router = createBrowserRouter([
   		{
    		 path: "/",
