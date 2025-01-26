@@ -5,7 +5,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 
 const Navbar = () => {
     return (
-        <div className='my-5 border rounded-xl bg-[#9538E2] '>
+        <div className='my-5 pb-32 border rounded-xl bg-[#9538E2] relative'>
             {/* navbar start */}
             <div className="navbar">
                 <div className="navbar-start">
