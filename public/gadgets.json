@@ -1,0 +1,172 @@
+[
+  {
+    "product_id": "001",
+    "product_title": "Dell XPS 13 Laptop",
+    "product_image": "https://i.ibb.co.com/V97t547/dell-xps-13.jpg",
+    "category": "Computers",
+    "price": 999.99,
+    "description": "A high-performance laptop with a sleek design, ideal for professionals and creatives.",
+    "Specification": [
+      "Intel Core i7 Processor",
+      "16GB RAM",
+      "512GB SSD",
+      "13.3-inch 4K display",
+      "Windows 11"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "002",
+    "product_title": "MacBook Pro 14-inch",
+    "product_image": "https://i.ibb.co.com/DkZRGq1/macbook-pro-14.jpg",
+    "category": "Computers",
+    "price": 1799.99,
+    "description": "A powerful laptop for professionals with an Apple M1 Pro chip and stunning Retina display.",
+    "Specification": [
+      "Apple M1 Pro chip",
+      "16GB RAM",
+      "1TB SSD",
+      "14-inch Liquid Retina XDR display",
+      "macOS"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "003",
+    "product_title": "HP Envy 13 Laptop",
+    "product_image": "https://i.ibb.co.com/Q8jHX6L/hp-envy-13.jpg",
+    "category": "Computers",
+    "price": 799.99,
+    "description": "A budget-friendly laptop with excellent performance and a sleek aluminum design.",
+    "Specification": [
+      "Intel Core i5 Processor",
+      "8GB RAM",
+      "256GB SSD",
+      "13.3-inch Full HD display",
+      "Windows 10"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "004",
+    "product_title": "Microsoft Surface Pro 8",
+    "product_image": "https://i.ibb.co.com/WtdXRyr/surface-8.jpg",
+    "category": "Computers",
+    "price": 1199.99,
+    "description": "A versatile 2-in-1 laptop that can also function as a tablet with touchscreen and Surface Pen support.",
+    "Specification": [
+      "Intel Core i7 Processor",
+      "16GB RAM",
+      "512GB SSD",
+      "13-inch PixelSense display",
+      "Windows 11"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "005",
+    "product_title": "Lenovo ThinkPad X1 Carbon",
+    "product_image": "https://i.ibb.co.com/sCF7C3s/lenovo-carbon.jpg",
+    "category": "Computers",
+    "price": 1399.99,
+    "description": "A business-class ultrabook with robust security features and a lightweight design.",
+    "Specification": [
+      "Intel Core i7 Processor",
+      "16GB RAM",
+      "1TB SSD",
+      "14-inch Full HD display",
+      "Windows 10 Pro"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "006",
+    "product_title": "Asus ROG Zephyrus G14",
+    "product_image": "https://i.ibb.co.com/1ZgYpdF/asus-g14.jpg",
+    "category": "Computers",
+    "price": 1799.99,
+    "description": "A gaming laptop with impressive performance and portability, featuring AMD Ryzen 9 and NVIDIA GeForce RTX.",
+    "Specification": [
+      "AMD Ryzen 9 Processor",
+      "32GB RAM",
+      "1TB SSD",
+      "14-inch QHD display",
+      "Windows 11"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "007",
+    "product_title": "Samsung Galaxy S23",
+    "product_image": "https://i.ibb.co.com/p4yn35C/galaxy-s23.jpg",
+    "category": "Phones",
+    "price": 799.99,
+    "description": "Samsung's latest flagship phone with powerful performance, great camera, and 5G support.",
+    "Specification": [
+      "Qualcomm Snapdragon 8 Gen 2",
+      "8GB RAM",
+      "128GB storage",
+      "6.1-inch Dynamic AMOLED display",
+      "Android 13"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "008",
+    "product_title": "iPhone 15 Pro",
+    "product_image": "https://i.ibb.co.com/2Z7gm8D/apple-iphone-15-pro-1.jpg",
+    "category": "Phones",
+    "price": 1099.99,
+    "description": "The latest iPhone with the A17 Bionic chip, advanced camera system, and a sleek titanium design.",
+    "Specification": [
+      "A17 Bionic chip",
+      "6GB RAM",
+      "128GB storage",
+      "6.1-inch Super Retina XDR display",
+      "iOS 17"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "009",
+    "product_title": "Apple Watch Ultra",
+    "product_image": "https://i.ibb.co.com/tp6ZKY9/apple-watch-ultra-1.jpg",
+    "category": "Smart Watches",
+    "price": 799.99,
+    "description": "A rugged and feature-rich smartwatch designed for athletes and outdoor enthusiasts.",
+    "Specification": [
+      "49mm titanium case",
+      "GPS + Cellular",
+      "Always-on Retina display",
+      "Up to 36 hours battery life",
+      "watchOS 9"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "010",
+    "product_title": "Samsung Galaxy Watch 6",
+    "product_image": "https://i.ibb.co.com/BcjKqJk/galaxy-watch6-01.jpg",
+    "category": "Smart Watches",
+    "price": 349.99,
+    "description": "A smart and stylish watch with fitness tracking, heart rate monitoring, and more.",
+    "Specification": [
+      "1.4-inch Super AMOLED display",
+      "30+ fitness tracking modes",
+      "Up to 40 hours battery life",
+      "Wear OS powered by Samsung",
+      "Blood oxygen monitoring"
+    ],
+    "availability": true,
+    "rating": 4.6
+  }
+]
