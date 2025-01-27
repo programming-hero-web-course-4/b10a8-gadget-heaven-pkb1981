@@ -1,8 +1,8 @@
 import React from 'react';
 import Gadgets from './Component/Gadgets';
 import Navbar from './Component/Navbar';
-import Banner from'./Component/Banner'
-import Footer from './Component/Footer';
+import Banner from './Component/Banner';
+
 
 const Home = () => {
     return (
@@ -10,7 +10,7 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <Gadgets></Gadgets>
-            <Footer></Footer>
+            
        </div>
     );
 };
