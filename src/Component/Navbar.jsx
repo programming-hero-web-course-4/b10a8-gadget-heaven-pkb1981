@@ -1,9 +1,16 @@
 import React from 'react';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosHeartEmpty } from "react-icons/io";
+import { NavLink } from 'react-router-dom';
 
 
 const Navbar = () => {
+
+    const links=<>
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="statistic">Statistics</NavLink></li>
+                            <li><NavLink to="dashboard">Dashboard</NavLink></li>
+        </>
     return (
         <div className='my-5 pb-32 border rounded-xl bg-[#9538E2] relative'>
             {/* navbar start */}
@@ -27,9 +34,7 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Home</a></li>
-                            <li><a>Statistics</a></li>
-                            <li><a>Dashboard</a></li>
+                            {links}
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl text-white">Gadget Heaven</a>
@@ -37,9 +42,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white">
 
-                        <li><a>Home</a></li>
-                        <li><a>Statistics</a></li>
-                        <li><a>Dashboard</a></li>
+                       {links}
 
                     </ul>
                 </div>
