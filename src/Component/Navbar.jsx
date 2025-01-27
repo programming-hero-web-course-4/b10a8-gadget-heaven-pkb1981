@@ -6,11 +6,11 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const links=<>
-                            <li><NavLink to="/">Home</NavLink></li>
-                            <li><NavLink to="statistic">Statistics</NavLink></li>
-                            <li><NavLink to="dashboard">Dashboard</NavLink></li>
-        </>
+    const links = <>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="statistic">Statistics</NavLink></li>
+        <li><NavLink to="dashboard">Dashboard</NavLink></li>
+    </>
     return (
         <div className='my-5 pb-32 border rounded-xl bg-[#9538E2] relative'>
             {/* navbar start */}
@@ -42,7 +42,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white">
 
-                       {links}
+                        {links}
 
                     </ul>
                 </div>
