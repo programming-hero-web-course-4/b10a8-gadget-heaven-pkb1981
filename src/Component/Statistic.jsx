@@ -12,7 +12,7 @@ const Statistic = () => {
     </>
 
     return (
-        <div>
+        <div className='max-w-5xl mx-auto'>
             {/* navbar start */}
             <div className="navbar">
                 <div className="navbar-start">
@@ -51,7 +51,12 @@ const Statistic = () => {
                     <a className='border rounded-full p-2 bg-white'><IoIosHeartEmpty></IoIosHeartEmpty></a>
                 </div>
             </div>
+            <div className='text-center bg-[#9538E2] text-white py-6 border rounded-xl'>
+                    <h1 className='font-bold text-3xl '>Statistics</h1>
+                    <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to <br />the coolest accessories, we have it all!</p>
+            </div>
         </div>
+
     );
 };
 
