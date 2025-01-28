@@ -6,9 +6,10 @@ const Gadgets = () => {
     const [gadgets, setGadgets] = useState([]);
 
     useEffect(() => {
-        fetch('/public/gadgets.json')
+        fetch('./gadgets.json')
             .then(res => res.json())
             .then(data => setGadgets(data))
+            .catch((error)=>console.error('error loading json data',error));
     }, [])
 
     return (

@@ -12,7 +12,7 @@ const GadgetDetail = () => {
     const data = useLoaderData();
     const gadget = data.find(gadget => gadget.product_id === product_id)
 
-    const { product_image, product_title, price, availability, description, Specification, rating } = gadget
+    const { product_image, product_title, price, description, Specification, rating } = gadget
 
 
     const links = <>
@@ -71,6 +71,7 @@ const GadgetDetail = () => {
                 <div className='space-y-4'>
                     <h1>{product_title}</h1>
                     <p>Price:${price}</p>
+                    <button className='btn btn-sm border rounded-full bg-[#309c081a] text-[#309C08]'>In Stock</button>
                     <p>{description}</p>
                     <p>Specification:<ol>
                         {Specification.map((item, index) => (
@@ -78,16 +79,15 @@ const GadgetDetail = () => {
                         ))}
                     </ol>
                     </p>
-                    <p>Rating:<br />
-                     <div className='flex flex-row text-[#F9C004]'>
-                        <FaStar></FaStar>
-                        <FaStar></FaStar>
-                        <FaStar></FaStar>
-                        <FaStar></FaStar>
-                        <FaStarHalfAlt></FaStarHalfAlt>
+                    <p className='flex items-center gap-2'>Rating:<br />
+                        <div className='flex flex-row text-[#F9C004]'>
+                            <FaStar></FaStar>
+                            <FaStar></FaStar>
+                            <FaStar></FaStar>
+                            <FaStar></FaStar>
+                            <FaStarHalfAlt></FaStarHalfAlt>
 
-                    </div>
-                        {rating}</p>
+                        </div>{rating}</p>
                     <div className='flex items-center'>
                         <button className='btn btn-sm bg-[#9538E2] text-white border rounded-full '>Add To Card <AiOutlineShoppingCart></AiOutlineShoppingCart></button>
                         <div className='ml-2 p-2 border rounded-full '><IoIosHeartEmpty></IoIosHeartEmpty></div>
