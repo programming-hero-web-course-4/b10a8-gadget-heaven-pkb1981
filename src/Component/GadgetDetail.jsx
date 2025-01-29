@@ -5,16 +5,24 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
+import { addToStoredCartList, addToStoredWishList } from '../utility/cartDb';
+
 
 const GadgetDetail = () => {
     const { product_id } = useParams();
 
     const data = useLoaderData();
-    const gadget = data.find(gadget => gadget.product_id === product_id)
+    const gadget = data.find(gadget => gadget.product_id ===product_id)
 
     const { product_image, product_title, price, description, Specification, rating } = gadget
 
+const handleAddToCart=(product_id)=>{
+    addToStoredCartList(product_id);
+}
 
+const handleAddToWish=(product_id)=>{
+    addToStoredWishList(product_id);
+}
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="statistic">Statistics</NavLink></li>
@@ -89,8 +97,10 @@ const GadgetDetail = () => {
 
                         </div>{rating}</p>
                     <div className='flex items-center'>
-                        <button className='btn btn-sm bg-[#9538E2] text-white border rounded-full '>Add To Card <AiOutlineShoppingCart></AiOutlineShoppingCart></button>
-                        <div className='ml-2 p-2 border rounded-full '><IoIosHeartEmpty></IoIosHeartEmpty></div>
+
+                        <button onClick={()=>handleAddToCart(product_id)} className='btn btn-sm bg-[#9538E2] text-white border rounded-full '>Add To Card <AiOutlineShoppingCart></AiOutlineShoppingCart></button>
+
+                        <button onClick={()=>handleAddToWish(product_id)} className='ml-2 p-2 border rounded-full '><IoIosHeartEmpty></IoIosHeartEmpty></button>
                     </div>
 
                 </div>
