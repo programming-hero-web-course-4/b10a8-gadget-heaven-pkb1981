@@ -1,15 +1,37 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLoaderData } from 'react-router-dom';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosHeartEmpty } from "react-icons/io";
+import { getStoredCartList } from '../utility/cartDb';
+import Gadget from './Gadget';
 
 const Dashboard = () => {
 
-    const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="statistic">Statistics</NavLink></li>
-        <li><NavLink to="dashboard">Dashboard</NavLink></li>
-    </>
+    const [cartList, setCartList] = useState([]);
+
+    const allGadgets = useLoaderData();
+
+    useEffect(() => {
+        
+        const storedCartList = getStoredCartList();
+       
+        const storedCartListInt = storedCartList.map(id => parseInt(id));
+       
+        const addedCartList = allGadgets.filter(gadget => storedCartListInt.includes(gadget.product_id));
+     
+        setCartList(addedCartList);
+
+    }, [allGadgets])
+
+    const links = (
+        <>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="statistic">Statistics</NavLink></li>
+            <li><NavLink to="dashboard">Dashboard</NavLink></li>
+        </>
+    );
 
     return (
         <div>
@@ -54,28 +76,42 @@ const Dashboard = () => {
             <div className='text-center bg-[#9538E2] text-white py-6 border rounded-xl'>
                 <h1 className='font-bold text-3xl '>Dashboard</h1>
                 <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to <br />the coolest accessories, we have it all!</p>
-                <div className='py-3 space-x-4'>
-                    <button className='text-[#9538E2] bg-white border border-white rounded-full font-bold w-40 h-12'>Cart</button>
-                    <button className='text-white border border-white rounded-full w-40 h-12'>Wishlist</button>
-                </div>
-
             </div>
-            <div className='max-w-4xl mx-auto flex justify-between  font-bold py-4'>
-                <div>
-                    <h3>Cart</h3>
-                </div>
+
+            <div className='max-w-4xl mx-auto flex justify-end  font-bold py-4'>
+
                 <div className='flex items-center space-x-4'>
                     <h3>Total Cost:</h3>
-                    
-                        <button className="text-[#9538E2] border border-[#9538E2] rounded-full w-40 h-12 ">
-                            Sort By Price
-                            </button>
-                
+
+                    <button className="text-[#9538E2] border border-[#9538E2] rounded-full w-40 h-12 ">
+                        Sort By Price
+                    </button>
+
                     <button className='text-white bg-[#9538E2] border border-white rounded-full w-40 h-12'>Purchase</button>
 
                 </div>
 
             </div>
+
+            <Tabs className="py-10">
+
+                <TabList className='flex flex-row gap-x-5 justify-center py-5'>
+                    <Tab className='flex items-center justify-center font-bold border rounded-full bg-white text-[#9538E2]  w-40 h-12'>Cart
+                    </Tab>
+                    <Tab className='flex items-center justify-center  font-bold border rounded-full bg-white text-[#9538E2] w-40 h-12'>Wishlist</Tab>
+                </TabList>
+
+                <TabPanel>
+                    <h2 className='text-xl font-bold text-black'>Cart:{cartList.length}</h2>
+                    {
+                        cartList.map(gadget => <Gadget key={gadget.product_id} gadget={gadget} />)
+                    }
+                </TabPanel>
+                <TabPanel>
+                    <h2 className='text-xl font-bold text-black'>Wishlist</h2>
+
+                </TabPanel>
+            </Tabs>
         </div>
     );
 };

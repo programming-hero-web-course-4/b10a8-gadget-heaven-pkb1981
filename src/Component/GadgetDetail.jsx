@@ -12,17 +12,17 @@ const GadgetDetail = () => {
     const { product_id } = useParams();
 
     const data = useLoaderData();
-    const gadget = data.find(gadget => gadget.product_id ===product_id)
+    const gadget = data.find(gadget => gadget.product_id === product_id)
 
     const { product_image, product_title, price, description, Specification, rating } = gadget
 
-const handleAddToCart=(product_id)=>{
-    addToStoredCartList(product_id);
-}
+    const handleAddToCart = (product_id) => {
+        addToStoredCartList(product_id);
+    }
 
-const handleAddToWish=(product_id)=>{
-    addToStoredWishList(product_id);
-}
+    const handleAddToWish = (product_id) => {
+        addToStoredWishList(product_id);
+    }
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="statistic">Statistics</NavLink></li>
@@ -80,13 +80,16 @@ const handleAddToWish=(product_id)=>{
                     <h1>{product_title}</h1>
                     <p>Price:${price}</p>
                     <button className='btn btn-sm border rounded-full bg-[#309c081a] text-[#309C08]'>In Stock</button>
+                    
                     <p>{description}</p>
+                    
                     <p>Specification:<ol>
                         {Specification.map((item, index) => (
                             <li key={index}>{index + 1}.{item}</li>
                         ))}
                     </ol>
                     </p>
+                 
                     <p className='flex items-center gap-2'>Rating:<br />
                         <div className='flex flex-row text-[#F9C004]'>
                             <FaStar></FaStar>
@@ -98,9 +101,9 @@ const handleAddToWish=(product_id)=>{
                         </div>{rating}</p>
                     <div className='flex items-center'>
 
-                        <button onClick={()=>handleAddToCart(product_id)} className='btn btn-sm bg-[#9538E2] text-white border rounded-full '>Add To Card <AiOutlineShoppingCart></AiOutlineShoppingCart></button>
+                        <button onClick={() => handleAddToCart(product_id)} className='btn btn-sm bg-[#9538E2] text-white border rounded-full '>Add To Card <AiOutlineShoppingCart></AiOutlineShoppingCart></button>
 
-                        <button onClick={()=>handleAddToWish(product_id)} className='ml-2 p-2 border rounded-full '><IoIosHeartEmpty></IoIosHeartEmpty></button>
+                        <button onClick={() => handleAddToWish(product_id)} className='ml-2 p-2 border rounded-full '><IoIosHeartEmpty></IoIosHeartEmpty></button>
                     </div>
 
                 </div>
